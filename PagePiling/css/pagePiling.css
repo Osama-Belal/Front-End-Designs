@@ -1,0 +1,94 @@
+/*-------------------------Start Header----------------------------*/
+
+.header #section2{
+    background-image: url(../../../Images/headphones_minimalism_pink_120664_3840x2400.jpg)
+}
+.header #section3{background-image: url(../../../Images/colorful-colors-colourful-1428171.jpg)}
+.header #section4{background-image: url(../../../Images/art-close-up-color-1345813.jpg)}
+.header #section5{background-image: url(../../../Images/bird-s-eye-view-bright-close-up-1438761.jpg)}
+
+.header .section{background-size: cover;background-attachment: fixed;text-align:center;}
+/*
+#myVideo{
+    position: absolute;
+    z-index: 4;
+    right: 0;
+    bottom: 0;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100%;
+    background-color: black; /* in case the video doesn't fit the whole page*/
+    /*background-image: /* our video */;/*
+    background-position: center center;
+    background-size: contain;
+    object-fit: cover; /*cover video background */
+/*}
+
+
+#section1 .layer{
+    position: absolute;z-index: 5;
+    width: 100%;height: 100%;
+    left: 0;top: 0;
+    clip-path: polygon(0 0, 71% 0, 41% 66%, 49% 100%, 0 100%);
+    background-color: rgba(6, 51, 177, 0.72)
+}
+*/
+#infoMenu li a{color: #fff}
+
+#section1{overflow: hidden;background: #665c84 !important;}
+
+#section1 h1{
+    width: 50%;white-space: nowrap;
+    overflow: hidden;font-size: 98px;
+    font-family: 'Fredericka the Great';margin: 5px auto;
+    color: #FFF;background: #665c84;padding: 0 10px 14px 0;
+    -webkit-text-fill-color:transparent;-webkit-background-clip:text;
+    background-image: linear-gradient(5deg, #a5aeff 45%, #323232 28%)
+}
+
+#section1 span{
+    position: absolute;
+    left: 10%;z-index: -1;
+    font-size: 700px;font-family: serif;
+    -webkit-background-clip:text;font-weight: 900;
+    -webkit-text-fill-color:transparent;
+    font-family:'Oswald', 'Lato';
+}
+#section1 span.st{background-image: linear-gradient(140deg, #323232 50%, #a5aeff 36%)}
+#section1 span.nd{background-image: linear-gradient(to left, #323232 37%, #a5aeff 36%)}
+
+#section2 h1{color: #333;font-family: 'Fredericka the Great';font-size: 90px;}
+
+#section3 h1{color: #FFF;font-family: 'Oswald';font-size: 50px;
+    background-image: linear-gradient(to right, #0d00dc, #008ec5);
+    -webkit-background-clip:text;font-weight: 100;font-size: 100px;
+    -webkit-text-fill-color:transparent;margin-top: -10%;
+    letter-spacing: 5px;text-transform: uppercase
+}
+
+#section4 h1{color: #333;font-family: 'Oswald';font-size: 90px;}
+
+#section2 p{color: #888;font-family: 'Great Vibes';font-size: 20px;}
+#section3 p{color: #EEE;font-family: 'Great Vibes';font-size: 20px;}
+#section4 p{color: #eee;font-family: 'Great Vibes';font-size: 40px;}
+#section5 p{color: #888;font-family: 'Great Vibes';font-size: 20px;}
+
+#section5 .intro{overflow: hidden}
+
+#section5 .inputs, #section5 textarea{float: left;width: 48%;margin: 0 10px}
+#section5 .inputs{}
+
+#section5 input, #section5 textarea{
+    margin: 10px 0;padding: 10px;
+    background:rgba(106, 143, 255, 0.59);border: none;outline: none;
+    color: #FFF;font-family: 'Oswald';font-weight: 100;font-size: 20px;
+}
+#section5 input{width: 95%;height: 80px;margin-right: 10px}
+#section5 textarea{height: 440px}
+
+/*-------------------------End Header----------------------------*/
+
+
+

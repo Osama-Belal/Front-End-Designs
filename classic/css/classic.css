@@ -1,0 +1,480 @@
+/*--------------start global------------------*/
+body{}
+
+*{-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container{width: 1200px;margin: auto;overflow: hidden}
+
+a{text-decoration: none}
+
+ul{list-style: none;padding: 0;margin: 0}
+
+#about i{margin-left: 10%;color: #1abc9c}
+/*---------------------------------------------start navbar------------------------------------------------*/
+.navbar{
+    overflow:hidden;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    background: transparent;
+    transition: all .2s;
+    background-image: -o-linear-gradient(bottom, #222222 0%, #555555 100%);
+    background-image: -moz-linear-gradient(bottom, #222222 0%, #555555 100%);
+    background-image: -webkit-linear-gradient(bottom, #222222 0%, #555555 100%);
+    background-image: -ms-linear-gradient(bottom, #222222 0%, #555555 100%);
+}
+
+.navbar .brand{width:40%;float: left;text-transform: uppercase;color: #1abc9c;
+    font-family:'Raleway', cursive;font-size: 20px}
+
+.navbar.links{width:60%;float: left}
+
+.navbar .links a.active{
+    color: #EEE !important;
+    display: inline-block;
+    float: left;
+    padding: 29px 18px;
+    font-size: 20px;
+    box-shadow: inset 0px 0px 15px 4px #212327, inset 0px 0px 16px 6px #2d2d2d;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    position: relative
+
+}
+
+.navbar .links a.active::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #1abc9c;
+    width: 100%;
+    height: 2px;
+    transition: .5s
+}
+.navbar .links a{
+    display: inline-block;
+    float: left;
+    padding: 30px 18px;
+    font-size: 20px;
+    transition: .3s ease 0s;
+    text-transform: uppercase;
+    color: #1abc9c;
+    font-family: 'Josefin Sans';
+    text-decoration: none
+}
+
+.navbar .links a:hover{color: #EEE}
+
+.put{position: fixed;left: 0;top: 25%;}
+.put .btn{border: none;
+    border-radius: 0 40% 40% 0;
+    padding:15px 0;
+    width: 15px; 
+    display: block;
+    margin-top: 10px;
+    overflow: hidden;
+    transition: all .5s;
+    outline: none
+}
+.put .btn:hover{width: 70px}
+/*----------------------------------Start Header-------------------------------------------------------------------*/
+#home{
+    background-image: url(../images/animal-avian-beak-416202.jpg);
+    background-attachment:fixed;
+    background-size: cover;
+    position: relative;
+}
+.layer{height: 100%;width: 100%}
+#contact{height: 1000px; }
+
+#home .push{width: 90%;padding-top: 13%;}
+
+#home h1{
+    font-family: 'Josefin Sans', cursive, sans-serif;
+    font-style: oblique;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 5rem;
+    color: #f1c550;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 10%;
+    width:50% 
+}
+
+#home h1 span {display: block;font-weight: 200}
+
+#home h1 span.m{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 70%;
+    z-index: 2;
+    width: 0%;
+    height: 4%;
+    background: #1abc9c;
+    margin: 10px auto 0;
+    border-radius: 16px;
+    transition: all .5s;
+}
+
+#home h1:hover span.m{width: 60%}
+
+#home p{
+    font-family: monospace;
+    text-transform: capitalize;
+    font-size: 2rem;
+    color: #78a1bb;
+    color: #AAA;
+    padding: 30px 0 40px;
+    font-weight: 50
+}
+
+#home .os .light{margin: 0 0 30% 0 ;outline: none}
+
+#home .os .light::before{
+    content: "";
+    width: 100%;
+    position: absolute;
+    right: -100%;
+    top: 0;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 50%, #009688 50%);
+    transition: all .5s;
+    z-index: -1
+}
+
+#home .os .light:hover:before{
+    position: absolute;
+    top: 0;right: 0;
+}
+/*----------------------------------------Start About-------------------------------------------------------------------*/
+#about{background: #333;overflow: hidden}
+
+#about h1{
+    font-size: 5rem;
+    font-family: 'Josefin Sans';
+    letter-spacing: 15px;
+    padding: 60px 0;  
+    color: #EEE;
+    text-transform: uppercase;
+    font-weight: 400;
+    position: relative
+}
+
+#about h1 hr{width: 70px;height: 4px;background: #1abc9c;position: absolute;left:10.5%;top: 55%;border: none}
+
+#about h1 span{position: absolute;left: 17.6%;color: #1abc9c}
+
+#about .first,
+#about .second{padding: 80px 3% 0;overflow: hidden}
+
+#about .first h2{
+    font-size: 3rem;
+    font-family: 'Mali';
+    letter-spacing: 20px;
+    padding: 60px 0;  
+    color: #EEE;
+    margin: 10px 0 40px 3.5%;
+    text-transform: uppercase;
+    font-weight: 400;
+    position: relative
+}
+
+#about .first div,
+#about .second div{
+    float: left;
+    width: 45%;
+    height: 250px;
+    padding: 2% 2% 270px 5%
+}
+
+#about .first div h3,
+#about .first div p{color: #DDD;text-transform: uppercase;font-family: 'Josefin Sans';font-size: 1.5rem;}
+#about .first div p{font-size: 1rem;}
+
+#about .hr,#about .height, #about .half-height{height: 650px;width: 1px;border: none;background: #555;position: absolute;left: 47%;}
+#about .height{height: 1200px}
+#about .half-height{height: 300px}
+#about .width{height: 1px;width: 100%;border: none;background: #555;left: 15%;margin: 100px auto}
+
+#about .second div h3,
+#about .second div p{color: #DDD;text-transform: capitalize;font-family: 'Josefin Sans';font-size: 1.5rem;}
+#about .second div p{font-size: 1rem;}
+
+#about .third{width: 100%;height: 600px;background-image: url(../images/curve.png);background-size: cover}
+/*--------------------------------------------Start Portfolio-----------------------------------------------------------------*/
+#portfolio{margin: 0;padding: 5% 0 0 0}
+
+#portfolio hr{left:35% !important}
+
+#portfolio .pics{padding-top: 5%;overflow: auto}
+
+#portfolio .pics div{overflow: hidden;float: left;width: 30%;height: 400px;margin: 5px;position: relative}
+
+#portfolio .pics div img{width: 100%;height: 100%}
+
+#portfolio .pics div:nth-of-type(1){width: 59%;height: 810px}
+#portfolio .pics div:nth-of-type(2){width: 19%}
+#portfolio .pics div:nth-of-type(3){width: 19%}
+#portfolio .pics div:nth-of-type(4){width: 39%}
+#portfolio .pics div:nth-of-type(5){width: 99%;height: 300px}
+#portfolio .pics div:nth-of-type(6){width:49%}
+#portfolio .pics div:nth-of-type(7){width:49%}
+#portfolio .pics div:nth-of-type(8){width: 59%;height: 810px}
+#portfolio .pics div:nth-of-type(9){width:39%}
+#portfolio .pics div:nth-of-type(10){width:39%}
+#portfolio .pics div:nth-of-type(11){width:22%}
+#portfolio .pics div:nth-of-type(12){width:53%}
+#portfolio .pics div:nth-of-type(13){width:22%}
+
+#portfolio .pics div i{position: absolute;color: transparent;top: 32%;left: 47%;transition: .7s}
+#portfolio .pics div span{
+    position: absolute;
+    height: 100%;width: 100%;
+    background: transparent;top: 0;left: 0;transition: .7s
+}
+
+#portfolio .pics div span:hover{background: rgba(26, 188, 156, .5);top: 0;left: 0}
+#portfolio .pics div span:hover i{color: #1abc9c;transform: translateY(50px)}
+/*--------------------------------------------Start Testimonials-----------------------------------------------------------------*/
+#testimonials{padding: 150px 0 0;overflow: hidden}
+
+#testimonials .person{width: 100%;overflow: auto;margin-top: 20%;padding: 5% 0}
+
+#testimonials .person .info{float: left;width: 48%;overflow: auto;padding: 50px 5px}
+#testimonials .person .quote{float: left;width: 50%;overflow: auto;padding: 30px 5px;}
+
+#testimonials .person .info{padding: 22% 0}
+#testimonials .person .info img{max-width: 200px}
+
+#testimonials .person .info div{
+    display: inline-block;
+    position: relative;
+    width: 55%;
+    height: 100%;
+    left: 30px;
+    font-family: sans-serif;
+    color: #333;
+    font-size: 30px;
+    text-transform:uppercase
+}
+h4{position: absolute;top: 50px;font-family: sans-serif;color: #333;font-size: 20px;text-transform:uppercase}
+
+#testimonials .person .quote{
+    background:#E6E7E7;padding: 40px 50px;
+    transition: .6s;position: relative;
+    width: 37%;margin-left: 5%;
+    transition-delay: .4s
+}
+#testimonials .person .quote:hover{box-shadow: 30px 30px 2px #333}
+
+#testimonials .person .quote span.one{position:absolute;top:0;left: 0;background:#333;height:5px;width:0;transition:.5s}
+#testimonials .person .quote span.two{position:absolute;top:0;right: 0;background:#333;height:0;width:5px;transition:.5s}
+#testimonials .person .quote span.three{position:absolute;bottom:0;right: 0;background:#333;height:5px;width:0;transition:.5s}
+#testimonials .person .quote span.four{position:absolute;bottom:0;left:0;background:#333;height:0;width:5px;transition:.5s}
+
+#testimonials .person .quote:hover span.one,
+#testimonials .person .quote:hover span.three{width:100%;}
+#testimonials .person .quote:hover span.two,
+#testimonials .person .quote:hover span.four{height:100%}
+
+#testimonials .person .quote p{color: #333;text-transform: capitalize;font-family: 'Josefin Sans';font-size: 1.5rem;padding: 50px 0}
+#testimonials .person .quote i{margin: 0 40%;color: #1abc9c}
+
+#testimonials .person .info:nth-of-type(2),
+#testimonials .person .info:nth-of-type(4){float: right}
+/*--------------------------------------------Start Testimonials-----------------------------------------------------------------*/
+
+#contact .main-contact{
+    padding: 6% 0 ;
+    background-image: url(../images/background-black-close-up-952670.jpg);
+    background-size: cover;overflow: auto;
+    background-attachment: fixed;
+}
+
+#contact hr{width: 80%;height: 2px;margin: 20px auto 0; background: rgba(200, 200, 200, .4);border: none}
+
+#contact .main-contact h2{
+    color: #EEE;
+    letter-spacing: 7px;
+    width: 34%;
+    background: #333;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 2px 30px #000, -2px 2px 30px #000;
+}
+#contact .main-contact h2 span{font-size: 25px;font-family: monospace;letter-spacing: 10px;color: #EEE;text-transform: uppercase;
+font-weight: 200;margin-top: -20px }
+
+#contact .main-contact .our-cont{
+    color: #333;
+    width: 30%;padding:0;
+    background: #FFF;
+    float: left;
+    box-shadow: 5px 2px 30px #000, -2px 2px 30px #000;
+    margin: 250px 20px 650px;height: 250px;position: relative;
+}
+
+#contact .main-contact .our-cont span{color: #777;font-size: 20px;font-family: sans-serif;
+    position: absolute;left: 30px;right: 30px;text-align: center;text-transform: capitalize}
+#contact .main-contact .our-cont i{
+    background: #EEE;margin: -25px 39% 10px;
+    width: 80px;height: 80px;border-radius: 90px;
+    box-shadow: 2px 2px 15px #000, -2px 2px 15px #000;
+    padding: 4.5%;color: #78a1bb
+}
+
+#contact .main-contact .our-cont h6{
+    color: #555;text-align: center;
+    font-size: 20px;font-family: 'Segoe Print';
+    margin: 20px 0
+}
+#contact .main-contact .our-cont h5{
+    position: absolute;bottom: 0;width: 100%;
+    background: #EEE;margin: 0;text-transform: capitalize;
+    padding: 15px 0 15px 35%;font-family: sans-serif;color: #78a1bb
+}
+/*--------------------------------------------Start Offices-----------------------------------------------------------------*/
+
+#offices{margin-top: 400px}
+#offices .ex{overflow: hidden;}
+
+#offices .ex h2{
+    font-family: monospace;
+    font-size: 50px;
+    color: #FFF;
+    text-transform: uppercase;
+    position: relative;text-align: center
+}
+#offices .ex h2 i{display: block}
+
+#offices .ex div{float: left;width: 47%;height: 400px;margin: 60px 5px 25px;position: relative}
+#offices .ex div div{width: 100%;height: 400px;overflow: hidden;position: relative}
+#offices .ex div img{width: 100%;height: 100%;}
+#offices .ex div span{
+    position: absolute; 
+    width: 100%;height: 0;
+    left: 0;bottom: 0;
+    transition: .5s;padding: 0 10% ;color: #EEE;
+    font-size: 55px;text-transform: uppercase;font-family: 'Josefin Sans';
+    font-weight: 800;background: linear-gradient(transparent 50%, rgba(51, 51, 51, .5) 50%)
+}
+#offices .ex div:hover span{height: 100%}
+/*--------------------------------------------End Offices-----------------------------------------------------------------*/
+.footer{
+    background: #111;color: #555;
+    text-align: center;text-transform: capitalize;
+    padding: 10px 20%;margin-top: 60px;
+    font-family: 'Rainbow Bridge Personal Use';font-size: 15px
+}
+.footer i{color: red}
+.footer div{padding: 5px;border-radius: 20px;margin: 0 auto;transition: .5s}
+.footer a{color: #333;transition: .5s;margin: 3px}
+
+.footer a.fa-facebook-square:hover{color: #4267b2}
+.footer a.fa-twitter:hover{color: #01b2e6}
+.footer a.fa-instagram:hover{color: #b01584}
+.footer a.fa-linkedin-square:hover{color: #007bb6}
+.footer a.fa-codepen:hover{color: #FFF}
+
+.footer{font-family: 'Josefin Sans'}
+/*--------------------------------------------End Offices-----------------------------------------------------------------*/
+
+.omg{width: 700px;padding: 50px;margin: 0 30% 0}
+
+.omg h1{font-size: 50px;
+    margin: 50px; 
+    color: #EEE;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Josefin Sans',cursive;
+    font-style: oblique;
+    font-weight: 300;
+    
+}
+
+.omg h1::before{
+    content: "";
+    display: block;
+    background: linear-gradient(to right, #FF5E3A,#FFFF9D);
+    position: relative;
+    right: 20%;
+    width: 0%;
+    height:0.06em;
+    transition: all .5s;
+    transform: translateY(-0.15em);
+    border-radius: 0 50px 50px 0
+}
+
+.omg h1::after{
+    content: "";
+    display: block;
+    background: linear-gradient(to right, #FFFF9D,#FF5E3A);
+    position: relative;
+    left: 120%;
+    width: 0%;
+    height:0.06em;
+    transition: all .5s;
+    border-radius: 20px 0 0 20px
+}
+
+.omg h1:hover:after{width: 100%;left: 0}
+.omg h1:hover:before{width: 100%;right: 0}
+
+/*----------Start Frame Work---------------------------------------------------------------*/
+
+.os .light, .os .up{
+  padding: 20px 30px;
+  background: transparent;
+  color: #FFF;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 2rem;
+  border: 3px solid #FFF;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1
+}
+
+.os .up::before{
+    content: "";
+    width: 100%;
+    position: absolute;
+    left:0;
+    bottom: -100%;
+    height: 100%;
+    background: #78a1bb;
+    transition: all .5s;
+    z-index: -1
+}
+
+.os .up:hover:before{
+    position: absolute;
+    bottom: 0;left: 0
+}
+
+#portfolio h2,
+#testimonials h2,
+#contact h2{
+    font-size: 5rem;
+    font-family: monospace;
+    letter-spacing: 15px;
+    padding: 60px 0;  
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 200;
+    position: relative
+}
+#portfolio hr,
+#testimonials hr{width: 40px;height: 4px;background: #1abc9c;position: absolute;left:33%;top: 60%;border: none}

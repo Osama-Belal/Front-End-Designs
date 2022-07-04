@@ -1,0 +1,834 @@
+/*SOME GOOD FONTS
+"Edwardian Script ITC Regular", 
+"Matura MT Script Capitals Regular", 
+"Broadway Regular","Forte Regular",
+ "Brush Script MT"
+*/
+body{padding-top: 60px}
+
+@media (max-width:768px){
+    body{padding-top: 50px}
+}
+.hr-wdth{width: 100%;height: 2px;margin: 60px auto;background: #ff9900;opacity: .5;border: none}
+
+/****************** Start Overriging Bootstrap ********************/
+        /* Navbar */
+
+/* Active Links */
+.navbar-inverse .navbar-nav > .active > a, 
+.navbar-inverse .navbar-nav > .active > a:hover, 
+.navbar-inverse .navbar-nav > .active > a:focus{background-color: #e6b31e;}
+
+/* Normal Links */
+.navbar-inverse .navbar-nav > li > a{
+    color:#BBB;font-size: 16px;
+    transition: .2s;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.navbar-inverse .navbar-brand{
+    cursor: pointer;
+    font-size: 50px;
+    color: #e6b31e;padding:17px 15px;
+    font-family: "Berkshire Swash";font-weight: 400
+}
+
+/* Dropdown Menu */
+.dropdown-menu{
+    background-color: #0C1117;
+    border-top: 4px solid #e6b31e;
+    min-width: 200px
+}
+.navbar-right .dropdown-menu{left:0;right:auto}
+
+/* Dropdown Menu => Links */
+.dropdown-menu > li > a{
+    font-size:15px;
+    -webkit-transition: .2s ease;
+    -moz-transition: .2s ease;
+    -o-transition: .2s ease;
+    transition: .2s ease;
+    padding: 8px 20px;color: #AAA
+}
+
+.dropdown-menu i{padding-right: 10px;font-size: 15px}
+
+/* Dropdown Menu => Links => Hover */
+.dropdown-menu > li > a:hover, 
+.dropdown-menu > li > a:focus{
+    background-color: #ff9900;
+    color: #FFF;padding-left:30px
+}
+
+        /* Carousel */
+
+.carousel-inner > .item {height: 700px}
+@media (max-width:1200px){
+    .carousel-inner .item {height: auto !important}
+}
+
+.carousel-caption{bottom: 35%;padding: 25px;}
+
+.carousel-caption h1:first-letter{font-weight: 900}
+.carousel-caption h1{
+    font-size: 60px;
+    font-family: 'Raleway', "Matura MT Script Capitals Regular";
+    padding-bottom: 20px;font-weight: 900
+}
+
+.carousel-caption p{font-size: 19px;color: #EEE;font-family: 'M PLUS Rounded 1c';}
+
+.carousel-indicators li{width:15px;height: 15px;border-color: #ff9900}
+
+.carousel-indicators .active{width:17px;height: 17px;background: #ff9900}
+
+/****************** End Overriging Bootstrap ********************/
+
+/* ------------------------------- Start color-picker ------------------------------------ */
+
+.option-box{position: fixed;top: 150px;left: 0;z-index: 999}
+.option-box i.fa-gear{font-size: 35px;padding: 10px;color: #FFF;cursor: pointer}
+
+.color-picker{display: none}
+.color-picker ul li{padding: 10px;font-size: 30px;cursor: pointer}
+/* -------------------------------- End color-picker ----------------------------------- */
+
+
+/* ------------------------------ Start About Section ----------------------------------- */
+
+.about{padding: 400px 0;background: #0C1117;position: relative;overflow: hidden}
+
+.about .layer{position: absolute;top: 10%;left: 12%}
+
+.about .clip{position: absolute;top: 0;left: 0;width: 43%;height: 100%;background: #ccf0c3}
+
+.about h1 {font-family: "Berkshire Swash";color: #FFF;margin-bottom: 35px;font-size: 50px}
+.about h1 span{color: #ff9900;}
+.about p {color: #CCC;font-family: "Grand Hotel";font-size: 35px}
+
+
+/*------------------------------  End About Section  ------------------------------------*/
+
+/*------------------------------  Start About Features  ----------------------------------*/
+
+.features {
+    background-image: url(../Images/architectural-design-architecture-buildings-374811.jpg);
+    background-attachment: fixed;
+}
+.features .layer{width: 100%;height: 100%;background-color: rgba(3, 3, 3, .6);padding: 140px 0;}
+
+.features h1 {font-family: "Berkshire Swash";margin-bottom: 60px;font-size: 60px}
+
+.features .feat {
+    padding: 50px 20px;
+    transition: .9s;
+    margin: 20px 0;cursor: pointer;
+    position: relative;z-index: 999;
+}
+
+.features .feat span.one,
+.features .feat span.two,
+.features .feat span.three,
+.features .feat span.four{transition: .6s ease-in-out}
+
+.features .feat span.one{position:absolute;left: 0;top: 0;width: 0%;height:3px;background:#ff9900}
+.features .feat span.two{position:absolute;right: 0;top: 0;height:0%;width:3px;background:#ff9900}
+.features .feat span.three{
+    position:absolute;bottom:0;right:0;width:0%;height:3px;background:#ff9900}
+.features .feat span.four{
+    position:absolute;left:0;bottom: 0;height:0%;width:3px;background:#ff9900}
+
+.features .feat .talk{
+    position: absolute;
+    bottom: 0;left: 0;
+    width:100%;height:0;
+    background: #ff9900;color: #FFF;
+    transition: .5s ease-in-out;transition-delay: .5s;
+    overflow: hidden;
+}
+
+.features .feat .talk button{
+    position: relative;
+    background: none;
+    color: #111;margin: 15% auto;
+    border: 3px solid #111;z-index: 80;
+    border-radius: 4px;outline: none;
+    font-size: 20px;padding: 15px;
+    font-weight: 800;transition: .4s
+}
+.features .feat .talk button::before{
+    content: "";
+    position: absolute;
+    right: 0;bottom: 0;
+    height: 100%;width: 0;
+    background: linear-gradient(135deg, transparent 50%, #111 50%);
+    transition: .3s;z-index: -1
+}
+
+.features .feat:hover span.one,
+.features .feat:hover span.three{width: 100%}
+.features .feat:hover span.two,
+.features .feat:hover span.four{height: 100%}
+.features .feat:hover span.talk{height: 51.5%}
+
+.features .feat .talk button:hover:before{width: 100%}
+.features .feat .talk button:hover{color: #FFF}
+
+.features .feat:hover{box-shadow: 12px 14px 51px 1px #000}
+.features .feat p{font-size: 18px;color:#EEE;font-family: "Bad Script"}
+.features .feat h3{;color:#EEE}
+.features .feat span.glyphicon{color: #ff9900;font-size: 40px}
+
+.features .hr-width{width:100%;height: 1px;background-color: #ff9900;margin: 100px auto}
+
+/*---------------------------  End About Features  -------------------------------------*/
+
+/*----------------------------  Start Section Testimonials  ---------------------------------*/
+
+.testimonials{padding: 100px 0;background: #0C1117;}
+
+.testimonials .carousel-inner > .one {
+    height: auto;
+    background-image: url(../Images/beach-cave-island-1142948.jpg);}
+
+.testimonials .carousel-inner > .two {
+    height: auto;
+    background-image: url(../Images/activity-adult-adventure-378152.jpg);}
+
+.testimonials .carousel-inner > .thre {
+    height: auto;
+    background-image: url(../Images/calling-casual-fashion-958960.jpg);}
+
+.testimonials .carousel-inner > .four {
+    height: auto;
+    background-image: url(../Images/adult-blur-business-302892.jpg);}
+
+.testimonials .carousel-inner > .item .layer{
+    background-image: linear-gradient(to right, rgba(6, 40, 80, .8), rgba(222, 101, 189, .62));
+    padding: 30px 70px
+}
+
+.testimonials .carousel-indicators{
+    position: static;
+    width: 100%;margin-left: auto;
+    padding-top: 50px
+}
+
+.testimonials .carousel-indicators li{
+    text-indent: 40px;overflow: hidden;
+    width: 90px;height: 90px;opacity: .4;
+    transition: .7s;border-radius: 50% 
+}
+.testimonials .carousel-indicators li img{max-width: 100%}
+.testimonials .carousel-indicators li.active{opacity: 1;text-indent: 0}
+
+.testimonials h1{
+    margin-bottom: 100px;font-weight: bold;
+    color:#FFF;font-family: "Bad Script";
+    letter-spacing: 5px;
+    text-shadow:10px 7px 5px #000, 9px 8px 0 rgba(0,0,0,0.15)
+}
+
+.testimonials .lead{color:#EEE;font-family: "Raleway";letter-spacing: 1px}
+.testimonials .item .fa{color:#EEE;margin: 30px 0;font-size: 50px;position: relative;left: -45%}
+.testimonials .item .fa-quote-right{left: 46%}
+
+.testimonials span{font-size: 35px;color: #CCC;font-weight: 900;font-family: "Sacramento"}
+
+/*-------------------------------  End Section Testimonials  ---------------------------------*/
+
+
+/*-------------------------------  Start Prices Table  --------------------------------*/
+
+.price-table{padding-top: 200px;padding-bottom: 350px;position: relative;overflow: hidden}
+
+
+.price-table .back{
+    position: absolute;
+    width: 102%;height: 102%;
+    top: -1%;left: -1%;z-index: -1;
+    background-image: url(../Images/cold-frosty-frozen-1417651.jpg);
+    background-attachment: fixed;
+    filter:brightness(50%)
+}
+
+.price-table .container{
+    padding: 30px ;overflow: hidden;
+    box-shadow: 1px 1px 5px 0px #333, 2px -1px 16px 2px #333}
+
+.price-table h1{margin-bottom: 60px;font-family: "Aclonica";font-size: 50px}
+
+.price-table .price-box{
+    transition: .3s;
+    margin-bottom: 40px;padding: 30px 20px;position: relative;
+    cursor: pointer;font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.price-table .price-box:hover{
+    -webkit-transform: translateY(15px);
+    -moz-transform:translateY(15px);
+    -o-transform:translateY(15px);
+    transform:translateY(15px);
+    background:#EEE;
+}
+.price-table .price-box:hover h2{color: #333}
+.price-table .price-box:hover p{color: #333}
+.price-table .price-box:hover li{color: #333}
+.price-table .price-box:hover span{color: #333}
+.price-table .price-box:hover .btn{background: #333;border:none}
+
+.price-table .order-1{;background-color:#316795}
+.price-table .order-2{;background-color:#418241}
+.price-table .order-3{;background-color:#428BA1}
+.price-table .order-4{;background-color:#AD4542}
+
+.price-table .price-box h2{margin-bottom: 20px;font-weight: 600;color: #EEE}
+
+.price-table .price-box hr{margin:15px auto;background: rgba(3, 3, 3, .3) !important;height: 1px}
+
+.price-table .price-box p{font-size:60px;color: #FFF;font-weight: 800}
+.price-table .price-box p span{font-size: 30px; color: #FFF;font-weight: 800;margin-left: 7px}
+
+.price-table .price-box ul{line-height: 200%;font-size: 20px;color: #DDD}
+
+.price-table .price-box a{margin: 10px auto;width: 50%;height: 20%}
+
+/*----------------------------  End Prices Table  ------------------------------------*/
+
+
+/*-------------------------------  Start Our Team  ---------------------------------*/
+
+.our-team{
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-color: #0C1117;
+    color: #EEE;position: relative;
+}
+
+.our-team h1{
+    margin-bottom: 120px;
+    font-family: "Berkshire Swash";
+    font-size: 50px;margin-top: 0;
+    font-weight: bolder
+}
+
+.our-team .person{margin-bottom: 60px}
+.our-team .person h3{color: #0C1117;font-family:'M PLUS Rounded 1c';letter-spacing: 3px }
+.our-team .person p{color: #888;font-family:'M PLUS Rounded 1c' }
+.our-team .person .fa{font-size: 16px;color: #000;margin-right: 10px}
+
+.our-team img{
+    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+    transition: 3s 
+}
+.our-team img:hover{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/*--------------------------------------  End Our Team  --------------------------------------*/
+
+
+/*---------------------------------  Start Subscripe  ------------------------------*/
+
+.subscripe{
+    background-image: url(../Images/astronomy-comet-constellation-631477.jpg);
+    background-attachment: fixed;
+}
+.subscripe .layer{
+    padding-top: 220px;padding-bottom: 220px;
+    background:  rgba(12, 17, 23, .7)
+}
+
+.subscripe h1{
+    margin-bottom: 50px;
+    letter-spacing: 5px;font-size: 100px;
+    color: #FFF;font-weight: 100;
+    font-family:"Parisienne";
+}
+
+.subscripe p{
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+    color: #CCC;font-weight: 100;
+    font-family: 'M PLUS Rounded 1c';
+}
+
+
+.subscripe .form-control{border-radius: 10px 0 0 10px;width: 300px;margin-right: -5px}
+.subscripe button{border-radius: 0 10px 10px 0;padding: 10.5px 16px}
+.subscripe button i{padding-right: 3px}
+
+
+/*--------------------------------------  End Subscripe  --------------------------------------*/
+
+
+/*------------------------------------  Start Statistics  -------------------------------*/
+
+.Statistics{background: #0C1117;color: #B6B5B5;padding-top: 200px;}
+
+.Statistics .stat{
+    transition: all .5s ease-in-out;margin-bottom: 40px;position: relative;cursor: pointer}
+.Statistics .stat:hover{color: #FFF}
+
+.Statistics p{font-size: 60px;margin-bottom: 0}
+
+.Statistics span{font-size: 20px}
+
+.Statistics hr{background: rgba(122, 128, 128, .6) !important;margin-top: 100px}
+.Statistics .col-xs-12{height: 200px}
+
+/*---------------------------------  End Statistics  -----------------------------------*/
+
+
+/*-----------------------------------  Start our-skills  ---------------------------------*/
+
+.our-skills{
+    padding-bottom: 280px;padding-top: 20px;background: #0C1117;color: #EEE;position: relative;}
+
+.our-skills h1,
+.Statistics h1{color: #FFF;margin-bottom: 60px;font-size: 50px;font-family: "Aclonica"}
+
+.our-skills h3{margin-top: 40px;font-weight: bold}
+
+.our-skills .progress{
+    height: 4px;margin-top: 50px ;overflow: visible;background: rgba(150, 150, 150, .3)}
+.our-skills .progress-bar{
+    position: relative;line-height: 50px;font-size: 15px;background: #FFF;
+    background-image: linear-gradient(to left, rgba(3, 26, 53), #0F77F3)}
+.our-skills .progress-bar::after{
+    content: "";position: absolute;
+    left: 99%;top: -190%;
+    width: 20px;height: 20px;background:rgba(3, 26, 53);
+    border-radius: 50%;z-index: 10;
+}
+
+/*------------------------------------  End our-skills  ------------------------------------*/
+
+
+/*-----------------------------------  Start Contact Us  --------------------------------*/
+
+.contact{
+    background-image: url(../Images/abandoned-apocalypse-boy-42157.jpg);
+    background-attachment: fixed
+}
+
+.contact .layer{
+    width: 100%;height: 100%;
+    background-color: rgba(3, 3, 3, .6);
+    padding-top: 300px;padding-bottom: 300px;color: #888
+}
+
+.contact p{margin-bottom: 50px}
+.contact textarea{height: 108px}
+
+.contact input,
+.contact textarea,
+.contact button{background: rgba(82, 78, 78, .4);color: #FFF;border: none}
+
+/*-----------------------------------  End Contact Us  --------------------------------------*/
+
+/*----------------------------------  End Our Clients  -----------------------------------*/
+
+.clients{padding-bottom: 100px;padding-top: 200px;background: #e4e3e9}
+
+.clients li img{opacity: .7;filter: grayscale(100%);
+    margin-top: 60px;margin-bottom: 60px;transition: .3s ease-in-out}
+
+.clients li img:hover{opacity: 1;filter: grayscale(0%)}
+
+/*---------------------------------  End Our Clients  -----------------------------*/
+
+
+/*-------------------------------  Start Our Footer  --------------------------------*/
+
+.footer{padding-top: 100px; padding-bottom: 90px;background:#000;margin-top: -6px}
+
+.footer h3{
+    margin: 40px 0;letter-spacing: 5px;color: #AAA;font-family: 'M PLUS Rounded 1c', sans-serif;}
+
+.footer .ovrflow{overflow: auto}
+.footer .left{float: left;width: 50% }
+
+.footer ul li{margin: 5px 0;transition: .3s ease-in-out;cursor: pointer}
+
+.footer a{color:#333;transition: .3s ease-in-out;text-decoration: none}
+
+.footer ul li:hover,
+.footer a:hover{color: #EEE}
+
+.footer ul li i{margin-right: 20px }
+
+.footer .media{margin-bottom: 40px;color: #777;transition: .3s;cursor: pointer}
+.footer .media:hover{;color: #DDD}
+
+.footer .no-one{padding-right: 0}
+.footer .no-two{padding-left: 0}
+
+.footer .hr-wdth{background: rgba(122, 128, 128, .6) !important}
+
+.footer .fa-heart:hover{animation:heart .7s linear infinite}
+
+@keyframes heart {
+    0%{color: #E41B17;}
+    50%{color: #333;}
+    100%{color: #E41B17;}
+}
+
+.footer input{background: #141414;color: #FFF;border: none;border-radius: 5px 0 0 5px;height:50px}
+.footer input:focus{box-shadow: none}
+.footer button{
+    background: rgba(82, 78, 78, .4);
+    color: #FFF;border: none;
+    margin-left: -4px;border-radius: 0 5px 5px 0;height:50px
+}
+/*--------------------------------------  End Our Footer  --------------------------------------*/
+
+
+/*----------------------------------  Start Our FrameWork  ------------------------------------*/
+
+.pre,
+.pre-testimon{width: 60%;background:#000;height: 100px;
+    transform: perspective(80px) rotateX(10deg);}
+
+.pre{margin: -8% auto 5px auto}
+.pre-testimon{background:#0C1117;margin:-205px auto 0}
+
+/*----------------------------------  End  Our FrameWork  ------------------------------------*/
+
+
+/*----------------------------------  Start Loading Screen  --------------------------------*/
+
+.loading{
+    position: fixed;
+    top: 0;left: 0;
+    background: #0C1117 ;
+    z-index: 99999;
+    width: 100%;height: 100%
+}
+
+.socket{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    top: 50%;
+    margin-top: -100px;
+}
+
+.hex-brick{
+  background: #ABF8FF;
+  width: 30px;
+  height: 17px;
+  position: absolute;
+  top: 5px;
+  animation-name: fade;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.h2{
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+}
+
+.h3{
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+}
+
+.gel{
+    height: 30px;
+    width: 30px;	
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    position: absolute;top: 50%;left: 50%;
+}
+
+.center-gel{
+    margin-left: -15px;
+    margin-top: -15px;
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.c1{margin-left: -47px;margin-top: -15px;}
+.c2{margin-left: -31px;margin-top: -43px;}
+.c3{margin-left: 1px;margin-top: -43px;}
+.c4{margin-left: 17px;margin-top: -15px;}
+.c5{margin-left: -31px;margin-top: 13px;}
+.c6{margin-left: 1px;margin-top: 13px;}
+.c7{margin-left: -63px;margin-top: -43px;}
+.c8{margin-left: 33px;margin-top: -43px;}
+.c9{margin-left: -15px;margin-top: 41px;}
+.c10{margin-left: -63px;margin-top: 13px;}
+.c11{margin-left: 33px;margin-top: 13px;}
+.c12{margin-left: -15px;margin-top: -71px;}
+.c13{margin-left: -47px;margin-top: -71px;}
+.c14{margin-left: 17px;margin-top: -71px;}
+.c15{margin-left: -47px;margin-top: 41px;}
+.c16{margin-left: 17px;margin-top: 41px;}
+.c17{margin-left: -79px;margin-top: -15px;}
+.c18{margin-left: 49px;margin-top: -15px;}
+.c19{margin-left: -63px;margin-top: -99px;}
+.c20{margin-left: 33px;margin-top: -99px;}
+.c21{margin-left: 1px;margin-top: -99px;}
+.c22{margin-left: -31px;margin-top: -99px;}
+.c23{margin-left: -63px;margin-top: 69px;}
+.c24{margin-left: 33px;margin-top: 69px;}
+.c25{margin-left: 1px;margin-top: 69px;}
+.c26{margin-left: -31px;margin-top: 69px;}
+.c27{margin-left: -79px;margin-top: -15px;}
+.c28{margin-left: -95px;margin-top: -43px;}
+.c29{margin-left: -95px;margin-top: 13px;}
+.c30{margin-left: 49px;margin-top: 41px;}
+.c31{margin-left: -79px;margin-top: -71px;}
+.c32{margin-left: -111px;margin-top: -15px;}
+.c33{margin-left: 65px;margin-top: -43px;}
+.c34{margin-left: 65px;margin-top: 13px;}
+.c35{margin-left: -79px;margin-top: 41px;}
+.c36{margin-left: 49px;margin-top: -71px;}
+.c37{margin-left: 81px;margin-top: -15px;}
+
+.r1{
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: .2s;
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: .2s;
+}
+
+.r2{
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: .4s;
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: .4s;
+}
+
+.r3{
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: .6s;
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: .6s;
+}
+
+.r1 > .hex-brick{
+    animation-name: fade;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: .2s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: .2s;
+}
+
+.r2 > .hex-brick{
+    animation-name: fade;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: .4s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: .4s;
+}
+
+.r3 > .hex-brick{
+    animation-name: fade;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: .6s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: .6s;
+}
+
+
+@keyframes pulse{
+    0%{-webkit-transform: scale(1);transform: scale(1)}
+    50%{-webkit-transform: scale(0.01);transform: scale(0.01);}
+    100%{-webkit-transform: scale(1);transform: scale(1);}
+}
+
+@keyframes fade{
+    0%{background: #ABF8FF;}
+    50%{background: #90BBBF;}
+    100%{background: #ABF8FF;}
+}
+
+@-webkit-keyframes pulse{
+    0%{-webkit-transform: scale(1);transform: scale(1);}
+    50%{-webkit-transform: scale(0.01);transform: scale(0.01);}
+    100%{-webkit-transform: scale(1);transform: scale(1);}}
+
+@-webkit-keyframes fade{
+    0%{background: #ABF8FF;}
+    50%{background: #389CA6;}
+    100%{background: #ABF8FF;}
+}
+
+/*----------------------------------  End Loading Screen  ------------------------------------*/
+
+
+/*------------------------- Wobble Vertical -------------------------------------*/
+@-webkit-keyframes hvr-wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes hvr-wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+.hvr-wobble-vertical {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-wobble-vertical:hover, .hvr-wobble-vertical:focus, .hvr-wobble-vertical:active {
+  -webkit-animation-name: hvr-wobble-vertical;
+  animation-name: hvr-wobble-vertical;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+
+/*----------------------------------  Start Scroll To Top  ------------------------------------*/
+
+.scroll-top{
+    position: fixed;
+    background: #ccf0c3;z-index: 999;
+    color: #2d3999;padding: 15px;
+    top: 85%;right: 5%;display: none;
+    cursor: pointer
+}
+.scroll-top i{
+    font-size: 25px
+}
+
+/*----------------------------------  End Scroll To Top  ------------------------------------*/
+
+
+/*----------------------------------  End Scroll To Top  ------------------------------------*/
+
+.faq{padding: 80px 0 0}
+.faq-questions{padding: 120px 0}
+
+.faq h1{font-family: 'Raleway';font-weight: 700;font-size: 70px}
+
+.faq hr{
+    width: 10%;height: 5px;background: #f18a9b;
+    animation: width 1s ease-in-out;
+}
+@keyframes width {
+    0%{width: 50%}
+    100%{width: 10%}
+}
+
+.faq h1 span{font-weight: 100}
+.faq p{font-size: 20px}
+
+
+.faq-questions .panel-heading{padding: 20px 25px}
+.faq-questions .panel-heading a{
+    text-decoration: none;font-family: "Raleway";color: #EEE;
+    font-size: 20px}
+.faq-questions .panel-heading a span{font-weight: 800}
+
+.faq-questions .panel-heading a:after{
+    content: "\e114";font-family: 'Glyphicons Halflings';float: right;color: #333;}
+
+.faq-questions .panel-heading a.collapsed:after{
+    content: '\e080';font-family: 'Glyphicons Halflings';color: #999;}
+
+.panel-body{
+    padding: 30px 15px;
+    font-family: "Raleway";
+    letter-spacing: 1px;
+    color: #868686;
+}
+
+
+/*----------------------------------  End Scroll To Top  ------------------------------------*/
+
+
+/*----------------------------------  Start Our Grouping  ------------------------------------*/
+
+.features, .contact, .subscripe,
+.testimonials .carousel-inner > .item, .price-table .back{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/*----------------------------------  End Our Grouping  ------------------------------------*/

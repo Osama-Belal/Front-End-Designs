@@ -1,0 +1,43 @@
+@media (max-width: 500px) {
+    .carousel-caption h1{
+        font-size: 26px;
+        padding-bottom: 0
+    }
+    .navbar-inverse{background: #282f35}
+}
+
+/*---------------------  Extra Small ----------------------------  */
+@media (max-width: 767px) {
+    .navbar-inverse .navbar-nav > li > a{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .subscripe .form-control{
+        margin: 20px auto;
+        width: 100%;border-radius: 10px
+    }
+    .subscripe button{border-radius: 10px}
+    .navbar-fixed-top .navbar-collapse,
+    .navbar-fixed-bottom .navbar-collapse{max-height: none}
+}
+
+
+/*  ----------------------------Small ----------------------------  */
+@media (min-width: 768px) and (max-width:991px){
+    .footer input{width: 80% !important}
+}
+
+
+/* ---------------------------- Medium ----------------------------  */
+@media (min-width: 992px) and (max-width:1199){}
+
+
+/* ---------------------------- Large  ---------------------------- */
+@media (min-width: 1150px){
+    .our-skills{clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);margin-top: -3px}
+    .Statistics{clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);}
+    .subscripe{margin: -16% 0 -13%;clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0 100%)}
+    .our-team{clip-path: polygon(50% 0, 100% 20%, 100% 100%, 0 100%, 0 20%);margin-top: -16%}
+    .clients{clip-path: polygon(50% 7%, 100% 0, 100% 100%, 0 100%, 0 0);margin-top: -16%}
+    .contact{margin-top: -12%}
+}
